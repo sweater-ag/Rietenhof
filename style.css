@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    /* Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    /* Bold */
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+}
+
+
+.header-container{
+ display: flex;
+ margin: 1.5rem 2rem 0rem 2rem ;
+
+}
+
+.nav-list{
+    display: flex;
+    height: fit-content;
+    margin-top: 1rem;
+    margin-left: 30%;
+    width: fit-content;
+}
+
+.nav-list-item{
+    color: white;
+    display: block;
+    min-width: 9rem;
+    font-size: 13.5px;
+
+}
+
+.hero-image{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+
