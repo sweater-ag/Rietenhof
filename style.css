@@ -105,6 +105,12 @@ body {
     line-height: 24px;
 }
 
+.text-light{
+    color: white;
+    font-weight: 300;
+    line-height: 170%;
+}
+
 .header-section{
     width: fit-content;
     margin: auto;
@@ -146,6 +152,25 @@ body {
     margin-left: 10rem;
     max-width: 660px;
     margin-top: 70vh;
-
 }
 
+.bodycopy-highlight{
+    color: #fbd784;
+}
+
+.footer-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 5rem;
+}
+
+.text-bodycopy-footer{
+    max-width: 45%;
+}
+
+.contact-header{
+    color: #fbd784;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
