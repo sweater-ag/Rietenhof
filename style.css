@@ -1,3 +1,13 @@
+:root {
+    --text-decorative: clamp(0.7rem, 1vw, 1rem);
+    --header-l: clamp(2.5rem, 5vw, 4rem);
+    --header-m: clamp(2rem, 4vw, 3rem);
+    --header-s: clamp(1.5rem, 3vw, 2rem);
+    --text-bodycopy-m: clamp(0.8rem, 2vw, 0.9rem);
+    --text-bodycopy-s: clamp(0.7rem, 1.5vw, 0.8rem);
+    --nav-list-item: clamp(0.75rem, 1vw, 0.85rem);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +18,9 @@ a, li {
     text-decoration: none;
     list-style: none;
 }
+
+
+
 
 @font-face {
     font-family: 'Gilroy';
@@ -60,7 +73,7 @@ body {
 .text-decorative{
     color: #fbd784;
     position: relative;
-    font-size: 13.5px;
+    font-size: var(--text-decorative);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -89,11 +102,15 @@ body {
 }
 
 .header-l{
-    font-size: 4rem;
+    font-size: var(--header-l);
 }
 
 .header-m{
-    font-size: 3rem;
+    font-size: var(--header-m);
+}
+
+.header-s{
+    font-size: var(--header-s);
 }
 
 .text-bodycopy{
@@ -101,7 +118,12 @@ body {
 }
 
 .text-bodycopy-m{
-    font-size: 0.9rem;
+    font-size: var(--text-bodycopy-m);
+    line-height: 24px;
+}
+
+.text-bodycopy-s{
+    font-size: var(--text-bodycopy-s);
     line-height: 24px;
 }
 
@@ -109,6 +131,18 @@ body {
     color: white;
     font-weight: 300;
     line-height: 170%;
+}
+
+.text-center {
+    align-content: center;
+}
+
+.text-bottom {
+    align-content: flex-end;
+}
+
+.margin-top-m{
+    margin-top: 2rem;
 }
 
 .header-section{
@@ -137,7 +171,6 @@ body {
     display: block;
     min-width: 9rem;
     font-size: 13.5px;
-
 }
 
 .hero-image{
@@ -145,6 +178,10 @@ body {
     position: absolute;
     z-index: -1;
     top: 0;
+}
+
+.welcome-container{
+    margin: 4rem 0;
 }
 
 .welcome-section{
@@ -162,7 +199,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 5rem;
+    margin: 2rem 5rem;
 }
 
 .text-bodycopy-footer{
@@ -174,3 +211,64 @@ body {
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
+
+.gallery-top-container{
+    /* position: relative; */
+    background-color: orange;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 61.38%);
+}
+
+.flying-container{
+    background-color: #0B1D26 ;
+    position: absolute;
+    top: 5%;
+    right: 2vw;
+    min-width: 400px;
+    width: 25vw;
+    padding: 3.75rem 2rem 2rem 1.5rem;
+    z-index: 1;
+}
+
+.flying-container-bottom{
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    padding: 1.5rem 2.5rem 0;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0.045) 0%,rgba(11, 29, 38, 0.712) 10%,  #0b1d26 80%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-people-container-l{
+    width: 40vw;
+    justify-content: space-between;
+}
+
+.gallery-people-container-s{
+    width: 20vw;
+}
+
+
+.underline-container{
+    padding-bottom: .5rem ;
+    border-bottom: 0.2px solid #ccc;
+    margin-bottom: .5rem;
+}
+
+
+
+.gallery{
+    position: relative;
+}
+
