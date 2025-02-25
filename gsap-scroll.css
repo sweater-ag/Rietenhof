@@ -1,18 +1,25 @@
 .gallery-wrapper {
-overflow: hidden;
-background-color: orange;
-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: orange;
+    height: 100vh;
 }
 
 .gallery-section {
-overflow: hidden;
-background-color: pink;
+    position: relative;
 }
 
-.picture{
- height: 100vh;
+.picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Start hidden */
 }
+
 .picture img {
-width: 100vw;
-object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
