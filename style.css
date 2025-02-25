@@ -4,7 +4,7 @@
     --header-m: clamp(2rem, 4vw, 3rem);
     --header-s: clamp(1.5rem, 3vw, 2rem);
     --text-bodycopy-m: clamp(0.8rem, 2vw, 0.9rem);
-    --text-bodycopy-s: clamp(0.7rem, 1.5vw, 0.8rem);
+    --text-bodycopy-s: clamp(0.5rem, 2.5vw, 0.9rem);
     --nav-list-item: clamp(0.75rem, 1vw, 0.85rem);
 }
 
@@ -223,18 +223,19 @@ body {
     position: absolute;
     top: 5%;
     right: 2vw;
-    min-width: 400px;
-    width: 25vw;
-    padding: 3.75rem 2rem 2rem 1.5rem;
-    z-index: 1;
+    min-width: 400px; 
+    width: 20vw;
+    padding: 2rem 1rem 1rem 1.7rem;
+    z-index: 2;
 }
 
 .flying-container-bottom{
     position: absolute;
     z-index: 1;
     bottom: 0px;
-    padding: 1.5rem 2.5rem 0;
-    background: linear-gradient(180deg, rgba(11, 29, 38, 0.045) 0%,rgba(11, 29, 38, 0.712) 10%,  #0b1d26 80%);
+    padding: 40vh 2.5rem 1.5rem 2.5rem;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0% ,
+        #0b1d26d4 70%,#0b1d26 100%);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -265,8 +266,6 @@ body {
     border-bottom: 0.2px solid #ccc;
     margin-bottom: .5rem;
 }
-
-
 
 .gallery{
     position: relative;
