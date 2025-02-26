@@ -20,9 +20,6 @@ li {
     list-style: none;
 }
 
-
-
-
 @font-face {
     font-family: 'Gilroy';
     src: url('assets/fonts/Gilroy-Light.ttf') format('truetype');
@@ -267,6 +264,7 @@ body {
     margin: 6rem;
 }
 
+
 .text-bodycopy-footer {
     max-width: 50%;
 }
@@ -277,9 +275,11 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.gallery-wrapper {
+    position: relative;
+}
+
 .gallery-top-container {
-    /* position: relative; */
-    background-color: orange;
     background: linear-gradient(180deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 61.38%);
 }
 
@@ -304,6 +304,43 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.flying-container-bar{
+    z-index: 2;
+    height: 40vh;
+    width: 4px;
+    position: absolute;
+    left: 4rem;
+    background-color: #fbd78478;
+    top: 50%;
+    transform: translate(0, -50%);
+    box-shadow: 0px 0px 10px 0px #3b3b3be4;
+}
+
+.bar{
+    width: 4px;
+    height: 60px;
+    background-color: #eeb42c;
+    position: absolute;
+    border: .2px solid #fab108;
+}
+
+.bar-numbers {
+    height: 100%;
+    padding: 1.2rem;
+    padding-left: 1.7rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: space-between;
+}
+
+.bar-numbers p {
+    font-size: 21px;
+    font-weight: 400;
+    color: #fbd784;
 }
 
 .flex-row {
@@ -332,6 +369,4 @@ body {
     margin-bottom: .5rem;
 }
 
-.gallery {
-    position: relative;
-}
+
