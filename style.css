@@ -1,7 +1,7 @@
 :root {
     --text-decorative: clamp(0.7rem, 1vw, 1rem);
     --header-l: clamp(2.5rem, 5vw, 4rem);
-    --header-m: clamp(2rem, 4vw, 3rem);
+    --header-m: clamp(2.5rem, 4vw, 3rem);
     --header-s: clamp(1.5rem, 3vw, 2rem);
     --text-bodycopy-m: clamp(0.8rem, 2vw, 0.9rem);
     --text-bodycopy-s: clamp(0.5rem, 2.5vw, 0.9rem);
@@ -157,7 +157,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-
 }
 
 .logo {
@@ -179,6 +178,7 @@ body {
     align-items: center;
     margin: 5rem 4rem 2rem 4rem;
 }
+
 
 .nav-list {
     position: absolute;
@@ -306,7 +306,7 @@ body {
     justify-content: space-between;
 }
 
-.flying-container-bar{
+.flying-container-bar {
     z-index: 2;
     height: 40vh;
     width: 4px;
@@ -318,7 +318,7 @@ body {
     box-shadow: 0px 0px 10px 0px #3b3b3be4;
 }
 
-.bar{
+.bar {
     width: 4px;
     height: 60px;
     background-color: #eeb42c;
@@ -369,4 +369,78 @@ body {
     margin-bottom: .5rem;
 }
 
+@media (max-width: 576px) {
+    .nav-list {
+        display: none;
+    }
 
+    .header-container {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .welcome-section {
+        margin-top: 12rem;
+    }
+
+    .vertical-text {
+        display: none;
+    }
+
+    .welcome-container {
+        margin-top: 40%;
+    }
+
+    .header-section {
+        max-width: 450px;
+        padding: 2rem;
+    }
+
+    .welcome-section {
+        padding: 7rem 1.5rem 2rem 1.5rem;
+        margin: auto;
+    }
+
+    .welcome-section .header {
+        padding-bottom: 1rem;
+    }
+
+    .bg-img-s {
+        margin-left: 0;
+        height: 126px;
+        margin-bottom: -4.5rem;
+    }
+
+    .text-wrapper-s {
+        max-width: 300px;
+        margin: 0 1rem;
+    }
+
+    .arrow-right {
+        margin-left: 1rem;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        margin: 2rem 2rem 5rem 2rem;
+        position: relative;
+    }
+
+    .text-bodycopy-footer {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .copyright-text {
+        position: absolute;
+        bottom: -3rem;
+    }
+
+    .text-bodycopy-s {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
