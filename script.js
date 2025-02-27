@@ -1,8 +1,14 @@
 
 gsap.registerPlugin(ScrollTrigger);
-const windowWidth = window.innerWidth;
-gsap.set(".picture-scroll", { x: windowWidth });
 
+
+const windowWidth = window.innerWidth;
+const images = document.querySelectorAll(".gallery-section .picture");
+const barNumbers = document.querySelector(".bar-numbers");
+
+
+const desktopAnimation = () => {
+gsap.set(".picture-scroll", { x: windowWidth });
 
 let timeline = gsap.timeline({
     scrollTrigger: {
@@ -48,8 +54,7 @@ gsap.to(".bar", {
 })
 
 
-const images = document.querySelectorAll(".gallery-section .picture");
-const barNumbers = document.querySelector(".bar-numbers");
+
 
 barNumbers.innerHTML = ""; // Clear previous content
 
@@ -59,3 +64,21 @@ images.forEach((_, index) => {
     numElement.textContent = number;
     barNumbers.appendChild(numElement);
 });
+}
+
+const mobileAnimation = () => { 
+    console.log("Mobile animation");
+}
+
+const animate = () => {
+    if(windowWidth > 576 ) {
+        desktopAnimation();
+    } else {
+        mobileAnimation();
+    }
+}
+const init = () => {
+    animate();
+}
+
+init();

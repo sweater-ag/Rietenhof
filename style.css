@@ -266,7 +266,8 @@ body {
 
 
 .text-bodycopy-footer {
-    max-width: 50%;
+    width: 60%;
+    min-width: 300px;
 }
 
 .contact-header {
@@ -430,7 +431,7 @@ body {
     }
 
     .text-bodycopy-footer {
-        max-width: 100%;
+        width: 100%;
         margin-bottom: 1.5rem;
     }
 
@@ -440,7 +441,25 @@ body {
     }
 
     .text-bodycopy-s {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 400;
     }
+
+    .flying-container-bottom{
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .gallery-people-container-l{
+        width: 100%;
+    }
+
+    .gallery-people-container-s{
+        width: 50%;
+    }
+
+    .flying-container-bar, .flying-container-bottom, .flying-container{
+        display: none;
+    }
+
 }
