@@ -36,10 +36,9 @@ const horses = {
 
 console.log(horses.Sky.properties); 
 
-const updateText = (title, progress) => {
-    // check the bar position and update the text
-    console.log(title, progress);
-};
+// const updateText = (title, progress) => {
+//     console.log(title, progress);
+// };
 
 
 const desktopAnimation = () => {
@@ -102,13 +101,16 @@ const mobileAnimation = () => {
     images.forEach((image) => {
         gsap.from(image, {
             opacity: 0,
-            y: 10,
-            ease: "ease-in-out",
+            y: 5,
+            // scale: 0.98,
+            ease: "sine.out",
+            // ease: "elastic.out(2,0.5)",
+            // duration: 0.3,
             scrollTrigger: {
                 trigger: image,
-                start: "top 80%",
+                start: "top 90%",
                 end: "top top",
-                markers: true,
+                // markers: true,
                 toggleActions: "play none none reverse",
             }
         });
