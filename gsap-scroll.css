@@ -1,7 +1,6 @@
 .gallery-wrapper {
     position: relative;
     overflow: hidden;
-    /* background-color: orange; */
     height: 100vh;
 }
 
@@ -27,11 +26,10 @@
 
     .gallery-section{
         position: initial;
-        background-color: blueviolet;
+        /* background-color: blueviolet; */
     }
 
     .gallery-wrapper {
-        overflow: auto;
         flex-direction: column;
         height: fit-content;
     }
