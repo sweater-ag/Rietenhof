@@ -1,5 +1,6 @@
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 
 // const windowWidth = window.innerWidth;
@@ -42,7 +43,7 @@ console.log(horses.Sky.properties);
 
 
 const desktopAnimation = () => {
-    gsap.set(".picture:not(:first-child)", { x: window.innerWidth });
+    gsap.set(".picture:not(:first-child)", { x: "2000px" });
 
     let timeline = gsap.timeline({
         scrollTrigger: {
@@ -57,36 +58,45 @@ const desktopAnimation = () => {
 
     timeline.to(".picture:not(:first-child)", {
         x: 0,
-        duration: 1,
-        ease: "ease-in",
-        stagger: 1.2,
+        duration: 6,
+        ease: "power1.out",
+        stagger: 5.4,
     }, 1)
         .to(".picture:not(:last-child)", {
             opacity: 0,
-            duration: 1,
-            ease: "ease-in",
-            stagger: 1.2,
-        }, 1);
+            duration: 4,
+            ease: "power1.out",
+            stagger: 7.4,
+        }, 1)
 
-    gsap.to(".bar", {
-        bottom: 0,
-        scrollTrigger: {
-            trigger: ".gallery-wrapper",
-            start: "top top",
-            end: "bottom 10%",
+        .to(".bar", {
+            bottom: 0,
+            duration: 6* images.length,
+            ease: "ease-in",
             scrub: true,
-            onUpdate: (self) => {
-                let progress = self.progress;
-                let maxShift = 80;
-                let index = Math.round(progress);
-                if (images[index]) {
-                updateText(index, progress);
-                };
-                let barPosition = (1 - progress) * maxShift;
-                gsap.to(".bar", { bottom: `${barPosition}%`, duration: 0.1, ease: "none" });
-            }
-        }
-    })
+        }, 1);
+    
+
+
+    // gsap.to(".bar", {
+    //     bottom: 0,
+    //     scrollTrigger: {
+    //         trigger: ".gallery-wrapper",
+    //         start: "top top",
+    //         end: "bottom 10%",
+    //         scrub: true,
+    //         onUpdate: (self) => {
+    //             let progress = self.progress;
+    //             let maxShift = 80;
+    //             let index = Math.round(progress);
+    //             if (images[index]) {
+    //             updateText(index, progress);
+    //             };
+    //             let barPosition = (1 - progress) * maxShift;
+    //             gsap.to(".bar", { bottom: `${barPosition}%`, duration: 0.1, ease: "none" });
+    //         }
+    //     }
+    // })
 
     barNumbers.innerHTML = "";
     images.forEach((_, index) => {
@@ -96,6 +106,18 @@ const desktopAnimation = () => {
         barNumbers.appendChild(numElement);
     });
 }
+
+//make parralax effect of the hero moves slower than the bg 
+gsap.to(".hero-image", {
+    y: -100, 
+    scrollTrigger: {
+        trigger: ".hero-image",
+        start: "top top",
+        end: "bottom top",
+        scrub: true
+    }
+
+})
 
 const mobileAnimation = () => {
     images.forEach((image) => {

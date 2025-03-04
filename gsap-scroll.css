@@ -16,6 +16,11 @@
     height: 100vh;
 }
 
+/* .picture:not(:first-child){
+    left: 400px;
+    z-index: 2;
+} */
+
 .picture img {
     width: 100vw;
     height: 100vh;
