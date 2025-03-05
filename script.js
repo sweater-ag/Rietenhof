@@ -2,6 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const horizontalSections = gsap.utils.toArray(".gallery-grid");
 const galleries = document.querySelectorAll(".container-gallery");
+const scrollableText = document.querySelector(".scrollable-text");
 
 const desktopAnimation = () => {
     horizontalSections.forEach((container) => {
@@ -16,7 +17,18 @@ const desktopAnimation = () => {
                 end: "+=3500",
             }
         });
+        // gsap.to(scrollableText, {
+        //     y: -300,
+        //     // bottom: 0,
+        //     ease: "none",
+        //     scrollTrigger: {
+        //         trigger: container,
+        //         scrub: 1,
+        //         end: "+=3500",
+        //     }
+        // });
     });
+
 };
 
 const createDotsForGallery = (gallery) => {
