@@ -5,10 +5,6 @@ let horizontalSections = gsap.utils.toArray(".gallery-grid");
 const desktopAnimation = () => {
 horizontalSections.forEach((container) => {
     let sections = container.querySelectorAll(".panel");
-
-
-    //gsap to all sections exept the last one
-
     gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
