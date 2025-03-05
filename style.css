@@ -119,7 +119,7 @@ body {
     color: white;
 }
 
-.text-bodycopy-l{
+.text-bodycopy-l {
     font-size: var(--text-bodycopy-l);
     line-height: 150%;
 }
@@ -484,6 +484,10 @@ body {
     display: none;
 }
 
+.dots-container {
+    display: none;
+}
+
 @media (max-width: 730px) {
 
     .footer-flex {
@@ -608,6 +612,7 @@ body {
 
     .contact-header {
         margin-bottom: 1rem;
+        margin-top: 1rem;
     }
 
     .text-small-static {
@@ -638,7 +643,11 @@ body {
         z-index: 2;
     }
 
-  
+    .dots-container {
+        grid-area: 1/1;
+    }
+
+
 
     .flying-container-bottom {
         grid-area: 3 / 1;
@@ -656,6 +665,32 @@ body {
     .picture {
         width: 100vw;
         height: initial;
+    }
+
+    .dots-container {
+        display: flex;
+        gap: 10px;
+        height: 10px;
+        align-self: flex-end;
+        justify-self: center;
+        padding-bottom: 10px;
+        z-index: 3;
+    }
+
+    .dot {
+        width: 7px;
+        height: 7px;
+        background-color: #d3d3d3;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+    }
+
+    .dot.active {
+        background-color: #ffffff
+    }
+
+    .text-bodycopy-l {
+        font-size: var(--text-bodycopy-m);
     }
 
 
