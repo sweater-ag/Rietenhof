@@ -3,6 +3,20 @@ gsap.registerPlugin(ScrollTrigger);
 const horizontalSections = gsap.utils.toArray(".gallery-grid");
 const galleries = document.querySelectorAll(".container-gallery");
 const scrollableText = document.querySelector(".scrollable-text");
+const heroImage = document.querySelector(".hero-image");
+
+const stallionParallaxDesktop = () => {
+    gsap.to(heroImage, {
+        y: 80,
+        scrollTrigger: {
+            trigger: heroImage,
+            start: "top top",
+            scrub: true,
+            end: "+=60%",
+        }
+    });
+}
+
 
 const desktopAnimation = () => {
     horizontalSections.forEach((container) => {
@@ -17,17 +31,9 @@ const desktopAnimation = () => {
                 end: "+=3500",
             }
         });
-        // gsap.to(scrollableText, {
-        //     y: -300,
-        //     // bottom: 0,
-        //     ease: "none",
-        //     scrollTrigger: {
-        //         trigger: container,
-        //         scrub: 1,
-        //         end: "+=3500",
-        //     }
-        // });
     });
+
+    stallionParallaxDesktop();
 
 };
 
@@ -68,14 +74,27 @@ const enableDotNavigation = (gallery, dots, panels) => {
     });
 };
 
+const stallionParallaxMobile = () => {
+    gsap.to(heroImage, {
+        y: 30,
+        scrollTrigger: {
+            trigger: "header",
+            start: "top top",
+            scrub: true,
+            end: "+=60%",
+        }
+    });
+};
+
 const mobileAnimation = () => {
     galleries.forEach((gallery) => {
         const { dotsContainer, panels } = createDotsForGallery(gallery);
         const dots = dotsContainer.querySelectorAll(".dot");
-
         gallery.addEventListener("scroll", () => updateDots(gallery, dots, panels));
         enableDotNavigation(gallery, dots, panels);
     });
+
+    stallionParallaxMobile();
 };
 
 const animate = () => {
