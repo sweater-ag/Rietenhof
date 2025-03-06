@@ -41,7 +41,7 @@ assets/
  │   ├── Hero
  │   ├── Jerom
  │   ├── Matteo
- │   ├── Sky
+ │   └──  Sky
  ├── gallery-mobile/
  │   ├── Codex/
  │   │   ├── horse-1.jpg
@@ -51,8 +51,9 @@ assets/
  │   ├── Hero
  │   ├── Jerom
  │   ├── Matteo
- │   ├── Sky
-
+ │   └── Sky
+ └── 
+```
 ## Additional Notes
 - Maintain the **exact naming structure** to avoid errors in displaying images.
 - Ensure that both `assets-gallery/` and `assets-gallery-mobile/` contain the same images, but in different resolutions.
