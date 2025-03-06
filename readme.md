@@ -2,8 +2,8 @@
 
 ## Folder Structure
 All stallion pictures should be placed inside the following directories:
-- **`assets-gallery/`** – for high-resolution images
-- **`assets-gallery-mobile/`** – for optimized mobile images
+- **`assets/gallery/`** – for high-resolution images
+- **`assets/gallery-mobile/`** – for optimized mobile images
 
 Inside these directories, create a folder for each horse, using the horse's name as the folder name. Each folder should contain pictures of that specific horse.
 
