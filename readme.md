@@ -17,39 +17,41 @@ horse-3.jpg
 
 
 ## Image Requirements
-| Gallery Type        | Resolution (px) | File Format |
+| Folder       | Resolution (px) | File Format |
 |---------------------|----------------|-------------|
-| Desktop Gallery    | 1534 x 1096     | JPG         |
-| Mobile Gallery     | 552 x 442       | JPG         |
+| gallery    | 1534 x 1096     | JPG         |
+| gallery-mobile    | 552 x 442       | JPG         |
 
 
 
 ## Example Folder Structure
 ```
-assets-gallery/
- ├── Codex/
- │   ├── horse-1.jpg
- │   ├── horse-2.jpg
- │   ├── horse-3.jpg
- │   └── ...
- ├── Hero/
- │   ├── horse-1.jpg
- │   ├── horse-2.jpg
- │   ├── horse-3.jpg
- │   └── ...
-
-assets-gallery-mobile/
- ├── Codex/
- │   ├── horse-1.jpg
- │   ├── horse-2.jpg
- │   ├── horse-3.jpg
- │   └── ...
- ├── Hero/
- │   ├── horse-1.jpg
- │   ├── horse-2.jpg
- │   ├── horse-3.jpg
- │   └── ...
-```
+assets/
+ ├── gallery/
+ │   ├── Codex/
+ │   │   ├── horse-1.jpg
+ │   │   ├── horse-2.jpg
+ │   │   ├── horse-3.jpg
+ │   │   └── ...
+ │   ├── Hero/
+ │   │   ├── horse-1.jpg
+ │   │   ├── horse-2.jpg
+ │   │   ├── horse-3.jpg
+ │   │   └── ...
+ │   ├── Hero
+ │   ├── Jerom
+ │   ├── Matteo
+ │   ├── Sky
+ ├── gallery-mobile/
+ │   ├── Codex/
+ │   │   ├── horse-1.jpg
+ │   │   ├── horse-2.jpg
+ │   │   ├── horse-3.jpg
+ │   │   └── ...
+ │   ├── Hero
+ │   ├── Jerom
+ │   ├── Matteo
+ │   ├── Sky
 
 ## Additional Notes
 - Maintain the **exact naming structure** to avoid errors in displaying images.
