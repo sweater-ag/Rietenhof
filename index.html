@@ -17,13 +17,13 @@
                 <img src="./assets/logo-big.svg" alt="Rietenhof logo">
             </div>
             <ul class="nav-list">
-                <li><a class="nav-list-item nav-font-size " href="index.html">De hengsten</a></li>
-                <li><a class="nav-list-item nav-font-size" href="index.html">Voorwaarden</a></li>
-                <li><a class="nav-list-item nav-font-size" href="index.html">Contact</a></li>
+                <li><a class="nav-list-item nav-font-size "  href="#hengsten">De hengsten</a></li>
+                <li><a class="nav-list-item nav-font-size" href="#voorwaarden">Voorwaarden</a></li>
+                <li><a class="nav-list-item nav-font-size" href="#contact">Contact</a></li>
             </ul>
         </div>
         <div class="vertical-text ">
-            <p class="text-bodycopy nav-font-size">Volg ons op</p>
+            <a href="https://www.facebook.com/p/Trekpaarden-Vant-Rietenhof-61550229105143/" target="_blank"><p class="text-bodycopy nav-font-size">Volg ons op</p></a>
             <img src="./assets/facebook-icon.svg" alt="Facebook">
         </div>
 
@@ -37,7 +37,8 @@
                 src="./assets/background/hero-bg.jpg" alt="mountains" />
             <picture>
                 <source srcset="./assets/hero-stallion-mobile.png" media="(max-width: 576px)">
-                <img class="hero-image" src="./assets/hero-stallion1.png" alt="horse">
+                <source srcset="./assets/hero-stallion-medium.png" media="(max-width: 1400px)">
+                <img class="hero-image" src="./assets/hero-stallion.png" alt="horse">
             </picture>
 
             <div class="welcome-container">
@@ -69,11 +70,10 @@
             </div>
         </section>
         <section>
-            <div class="gallery-grid">
+            <div class="gallery-grid" id="hengsten">
                 <div class="flying-container">
                     <p class="text-decorative margin-bottom-s">Kampioen 2020, ‘23 en ‘24</p>
-                    <h3 class="header header-s horses-title margin-bottom-m">Hero van de Maaskanthoeve.</h3>
-                    <p class="text-bodycopy text-bodycopy-m scrollable-text ">Maar liefst drie keer is Hero van de
+                    <h3 class="header header-s horses-title margin-bottom-m">Hero van de Maaskanthoeve.</h3>                    <p class="text-bodycopy text-bodycopy-m scrollable-text ">Maar liefst drie keer is Hero van de
                         Maaskanthoeve
                         kampioen geworden tijdens de Nederlandse centrale
                         hengstenkeuring en dat in 2020, 2023 en nu recent
@@ -243,8 +243,8 @@
 
     </main>
     <footer>
-        <div class="footer-flex">
-            <div class="footer-description-container">
+        <div class="footer-flex" >
+            <div class="footer-description-container" id="voorwaarden">
                 <p class="text-bodycopy text-bodycopy-footer text-bodycopy-m"> <span class="bodycopy-highlight">Voor
                         het
                         dekseizoen 2025 gelden enkele voorwaarden.</span> Het risico tijdens verblijf, dekken en vervoer
@@ -271,7 +271,7 @@
                 </p>
                 <p class="copyright-text">Copyright 2025 - Stal ‘t Rietenhof</p>
             </div>
-            <div class="contact-container">
+            <div class="contact-container" id="contact">
                 <h3 class="contact-header">Contact</h3>
                 <p class="text-light text-bodycopy-l">&rsquo;t Rietenhof • Zavel 19 • 1840 Londerzeel</p>
                 <p class="text-light text-bodycopy-l">Tel: 0474 44 38 58 • <span

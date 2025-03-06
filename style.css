@@ -56,11 +56,15 @@
     font-weight: 400;
 }
 
+/* html{
+    scroll-behavior: smooth;
+} */
+
 body {
     font-family: 'Gilroy', sans-serif;
     font-weight: 500;
     background-color: #0B1D26;
-    overscroll-behavior: none;
+    /* overscroll-behavior: none; */
     color: white;
 }
 
@@ -91,7 +95,7 @@ body {
 }
 
 .header {
-    font-family: 'Chronicle Display', monospace;
+    font-family: 'Chronicle Display', serif;
     font-weight: 400;
     max-width: 60vw;
 }
@@ -233,6 +237,8 @@ body {
     transform-origin: bottom left;
 }
 
+
+
 .hero-image {
     width: 95%;
     position: absolute;
@@ -358,9 +364,39 @@ body {
 
 .scrollable-text {
     overflow: auto;
-    text-overflow: ellipsis;
     height: 50vh;
 }
+
+.flying-container::after{
+    content: '';
+    display: block;
+    height: 4rem;
+    position: sticky;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 95%);
+    margin-top: -4rem;
+    /* z-index: 5; */
+}
+
+
+
+/* ------------ */
+
+/* works in firefox and chrome */
+.scrollable-text{
+    scrollbar-color: #FBD784 #0b1d2600;
+}
+
+/* Safari */
+.scrollable-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-text::-webkit-scrollbar-thumb {
+    background: #FBD784;
+    border-radius: 6px;
+}
+
+/* ------------ */
 
 .flying-container-bottom {
     align-self: flex-end;
@@ -414,10 +450,11 @@ body {
 }
 
 .gallery-people-container-s p {
-    padding:0 .5rem;
+    padding: 0 .5rem;
 }
 
-.mobile-container, .dots-container {
+.mobile-container,
+.dots-container {
     display: none;
 }
 
@@ -430,7 +467,9 @@ body {
 }
 
 @media (max-width: 576px) {
-    .nav-list, .vertical-text {
+
+    .nav-list,
+    .vertical-text {
         display: none;
     }
 
@@ -555,6 +594,11 @@ body {
         height: max-content;
         padding: 0;
         z-index: 2;
+    }
+
+    .scrollable-text{
+        height: initial;
+        overflow: initial;
     }
 
     .dots-container {
