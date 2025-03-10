@@ -5,6 +5,10 @@ const panels = gsap.utils.toArray(".panel");
 const galleries = document.querySelectorAll(".container-gallery");
 const scrollableText = document.querySelector(".scrollable-text");
 const heroImage = document.querySelector(".hero-image");
+const dropdown = document.querySelector('.dropdown');
+const dropdowncontent = document.querySelector('.dropdown-content');
+const fadedBackground = document.querySelector('.faded-background');
+
 
 const stallionParallaxDesktop = () => {
     gsap.to(heroImage, {
@@ -170,6 +174,14 @@ const animate = () => {
 
 const init = () => {
     animate();
+    // dropdowncontent.addEventListener('mouseenter', () => {
+    //     fadedBackground.style.display = 'block';
+    // });
+
+    // dropdowncontent.addEventListener('mouseleave', () => {
+    //     fadedBackground.style.display = 'none';
+    // });
+    
 };
 
 init();
