@@ -60,6 +60,8 @@
     scroll-behavior: smooth;
 } */
 
+
+
 body {
     font-family: 'Gilroy', sans-serif;
     font-weight: 500;
@@ -115,6 +117,7 @@ body {
 .horses-title {
     color: #FBD784;
 }
+
 .text-bodycopy-l {
     font-size: var(--text-bodycopy-l);
     line-height: 150%;
@@ -230,9 +233,8 @@ body {
     height: fit-content;
     display: flex;
     align-items: center;
-    justify-content: center;
     padding-bottom: 50px;
-    gap: 1rem;
+    gap: .7rem;
     position: sticky;
     left: 99%;
     top: 0;
@@ -362,23 +364,26 @@ body {
     max-width: 300px;
     padding: 2rem 40px 40px 30px;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
     /* height: max-content; */
 }
 
 .scrollable-text {
     overflow: auto;
-    height: 35vh;
+    /* height: fit-content; */
     padding-right: 15px;
 }
 
-.flying-container::after{
+.flying-container::after {
     content: '';
     display: block;
-    height: 3rem;
+    height: 40px;
+    /* border: .3px solid #fbd784; */
     position: sticky;
-    background: linear-gradient(180deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 95%);
-    margin-top: -3rem;
-    /* z-index: 5; */
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 85%);
+    margin-top: -4.5%;
+    z-index: 5;
 }
 
 
@@ -386,7 +391,7 @@ body {
 /* ------------ */
 
 /* works in firefox and chrome */
-.scrollable-text{
+.scrollable-text {
     scrollbar-color: #FBD784 #0b1d2600;
 }
 
@@ -600,7 +605,7 @@ body {
         z-index: 2;
     }
 
-    .scrollable-text{
+    .scrollable-text {
         height: initial;
         overflow: initial;
     }
@@ -652,25 +657,26 @@ body {
     .text-bodycopy-l {
         font-size: var(--text-bodycopy-m);
     }
-    
-    
+
+
     /*STIJN ADDED THESE */
-    
+
     .horses-title {
         color: #FBD784;
         padding-top: 1rem;
-       font-size: clamp(1.5rem, 5vw, 5rem);
+        font-size: clamp(1.5rem, 5vw, 5rem);
     }
-    
-    .hidenonmobile{
+
+    .hidenonmobile {
         display: none;
     }
+
     .moreonmobile {
         padding-top: 1.7rem;
     }
-    
+
     .gallery-people-container-s {
         min-width: 90%;
     }
-    
+
 }
