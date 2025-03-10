@@ -22,83 +22,25 @@ const stallionParallaxDesktop = () => {
     });
 }
 
-
-const desktopAnimation = () => {
-    horizontalSections.forEach((container) => {
-        const sections = container.querySelectorAll(".panel");
-        gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: container,
-                pin: true,
-                scrub: 1,
-                end: "+=5000",
-            }
-        });
-
-
-        // gsap.to(sections, {
-        //     opacity: 0,
-        //     ease: "none",
-        //     scrollTrigger: {
-        //         trigger: sections[0],
-        //         pin: true,
-        //         scrub: 1,
-        //         end: "+=3500",
-        //     }
-        // });
-        
+const stallionParallaxMobile = () => {
+    gsap.to(heroImage, {
+        y: 30,
+        scrollTrigger: {
+            trigger: "header",
+            start: "top top",
+            scrub: true,
+            end: "+=60%",
+        }
     });
-
-
-    stallionParallaxDesktop();
-
 };
 
-
-    // gsap.utils.toArray(".panel")?.forEach((panel, i) => {
-    //     let scroll_TL = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: panel,
-    //             markers: true,
-    //             start: "top top",
-    //             // end:"200%",
-    //             pin: true,
-    //             pinSpacing: false,
-    //             scrub: 1,
-    //             snap: 1,
-    //         }
-    //     });
-
-    //     scroll_TL.fromTo(
-    //         panel,
-    //         { opacity: 0, y: 5, zIndex: -1 },
-    //         { duration: 0.8, opacity: 1, y: 0, zIndex: 1 }
-    //     );
-    // });
-// const targetPanel = panels[1];
-
-// setInterval(() => {
-//     console.log("Left Position:", targetPanel.getBoundingClientRect().left);
-//     console.log("Opacity:", targetPanel.style.opacity);
-// }, 2000);
-
-// gsap.to(targetPanel, {
-//     opacity: 1,  // Fade in
-//     duration: 1,
-//     scrollTrigger: {
-//         trigger: targetPanel,
-//         start: " center center",
-//         end: "center 40%",
-//         toggleActions: "play none none reverse",
-//         markers: true, // Debug markers (remove when done)
-//         horizontal: true, // Ensure it applies to horizontal scroll
-//         scroller: ".container-gallery", // Ensure correct scrolling container
-
-//     }
-// });
-
+const StallionParallax = () => {
+    if (window.innerWidth > 576) {
+        stallionParallaxDesktop();
+    } else {
+        stallionParallaxMobile();
+    }
+};
 
 
 
@@ -141,47 +83,22 @@ const enableDotNavigation = (gallery, dots, panels) => {
     });
 };
 
-const stallionParallaxMobile = () => {
-    gsap.to(heroImage, {
-        y: 30,
-        scrollTrigger: {
-            trigger: "header",
-            start: "top top",
-            scrub: true,
-            end: "+=60%",
-        }
-    });
-};
 
-const mobileAnimation = () => {
+
+const galleryDots = () => {
     galleries.forEach((gallery) => {
         const { dotsContainer, panels } = createDotsForGallery(gallery);
         const dots = dotsContainer.querySelectorAll(".dot");
         gallery.addEventListener("scroll", () => updateDots(gallery, dots, panels));
         enableDotNavigation(gallery, dots, panels);
     });
-
-    stallionParallaxMobile();
 };
 
-const animate = () => {
-    if (window.innerWidth > 576) {
-        desktopAnimation();
-    } else {
-        mobileAnimation();
-    }
-};
+
 
 const init = () => {
-    animate();
-    // dropdowncontent.addEventListener('mouseenter', () => {
-    //     fadedBackground.style.display = 'block';
-    // });
-
-    // dropdowncontent.addEventListener('mouseleave', () => {
-    //     fadedBackground.style.display = 'none';
-    // });
-    
+    StallionParallax();
+    galleryDots();
 };
 
 init();
