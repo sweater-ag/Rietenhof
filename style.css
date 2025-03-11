@@ -348,6 +348,22 @@ body {
     width: 100vw;
     
 }
+.panel{
+    display: grid;
+    height: fit-content;
+}
+
+.photo-credit {
+    color: #eac474;
+    margin-left: 2.8rem;
+    margin-top: 4rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+.panel picture, .panel .photo-credit {
+    grid-area: 1/1;
+}
 
 .gallery-grid {
     display: grid;
@@ -455,27 +471,11 @@ body {
     color: #FBD784;
 }
 
-/* .gallery-people-container-l {
-    width: 100%;
-    justify-content: space-between;
-} */
-
-/* .gallery-people-container-s {
-     min-width: 170px;
-     make bigger
-     margin-left: 3rem;
-} 
-*/
-
 .underline-container {
     padding-bottom: .1rem;
     border-bottom: 0.2px solid #ccc;
     margin-bottom: .3rem;
 }
-
-/* .gallery-people-container-s p {
-    padding: 0 .5rem;
-} */
 
 .dots-container {
     grid-area: 1/1;
@@ -528,6 +528,11 @@ body {
 
     .flying-container-bottom-flex-wrap {
         gap: .5rem;
+    }
+
+    .photo-credit {
+        margin-left: 4%;
+        margin-top: 6%;
     }
 }
 
@@ -707,10 +712,6 @@ body {
     .moreonmobile {
         padding-top: 1.7rem;
     }
-
-    /* .gallery-people-container-s {
-        min-width: 90%;
-    } */
 
     .dots-container {
         display: flex;
