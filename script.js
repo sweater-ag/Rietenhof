@@ -1,5 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-
 const horizontalSections = gsap.utils.toArray(".gallery-grid");
 const panels = gsap.utils.toArray(".panel");
 const galleries = document.querySelectorAll(".container-gallery");
@@ -8,6 +7,7 @@ const heroImage = document.querySelector(".hero-image");
 const dropdown = document.querySelector('.dropdown');
 const dropdowncontent = document.querySelector('.dropdown-content');
 const fadedBackground = document.querySelector('.faded-background');
+
 
 
 const stallionParallaxDesktop = () => {
