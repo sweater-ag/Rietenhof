@@ -14,12 +14,14 @@ const closeSVGString = `<svg xmlns="http://www.w3.org/2000/svg" width="43" heigh
   <path d="M14 14L28.0253 28.0253" stroke="black" stroke-width="2" stroke-linecap="round"/>
   <path d="M28.0254 14L14.0001 28.0253" stroke="black" stroke-width="2" stroke-linecap="round"/>
 </svg>`
+
 const options = {
     arrowPrevSVG: leftArrowSVGString,
     arrowNextSVG: rightArrowSVGString,
     closeSVG: closeSVGString,
     gallery: '#my-gallery',
     children: 'a',
+    secondaryZoomLevel:  window.innerHeight / 715,
     pswpModule: () => import('https://unpkg.com/photoswipe'),
 }
 const links = document.querySelectorAll('.container-gallery a');
