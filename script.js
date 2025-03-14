@@ -1,8 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
-const horizontalSections = gsap.utils.toArray(".gallery-grid");
-const panels = gsap.utils.toArray(".panel");
+// const horizontalSections = gsap.utils.toArray(".gallery-grid");
 const galleries = document.querySelectorAll(".container-gallery");
-const scrollableText = document.querySelector(".scrollable-text");
+// const scrollableText = document.querySelector(".scrollable-text");
 const heroImage = document.querySelector(".hero-image");
 const dropdown = document.querySelector('.dropdown');
 const dropdowncontent = document.querySelector('.dropdown-content');
@@ -42,9 +41,6 @@ const StallionParallax = () => {
     }
 };
 
-
-
-
 const createDotsForGallery = (gallery) => {
     const panels = gallery.querySelectorAll(".panel");
     const dotsContainer = document.createElement("div");
@@ -71,7 +67,6 @@ const updateDots = (gallery, dots, panels) => {
     });
 };
 
-
 const enableDotNavigation = (gallery, dots, panels) => {
     dots.forEach((dot, index) => {
         dot.addEventListener("click", () => {
@@ -83,8 +78,6 @@ const enableDotNavigation = (gallery, dots, panels) => {
     });
 };
 
-
-
 const galleryDots = () => {
     galleries.forEach((gallery) => {
         const { dotsContainer, panels } = createDotsForGallery(gallery);
@@ -93,7 +86,6 @@ const galleryDots = () => {
         enableDotNavigation(gallery, dots, panels);
     });
 };
-
 
 
 const init = () => {
