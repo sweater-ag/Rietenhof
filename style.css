@@ -803,17 +803,32 @@ body {
 }
 /* ------- */
 
-/* ------- */
-/* Modal container */
-.image-modal {
-    display: none; 
-    position: fixed;
-    z-index: 1000;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.8); 
+/* .pswp__icn-right{
+    margin-right: 40px;
+} */
+
+.pswp__button--arrow--prev {
+    left: calc(50vw - 440px) !important;
 }
+
+.pswp__button--arrow--next {
+    right: calc(50vw - 440px) !important;
+}
+
+.pswp__custom-caption {
+    font-size: 16px;
+    color: #eac474;
+    padding: 2px 8px;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+  }
+  .pswp__custom-caption a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .hidden-caption-content {
+    display: none;
+  }
